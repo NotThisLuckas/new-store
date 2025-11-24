@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New Store – Comunidade de Vendas no Discord</title>
+  <meta name="description" content="New Store é a melhor comunidade para vendas no Discord. Compre cargos, venda seus produtos e faça parte de um ambiente profissional, seguro e organizado." />
+  <link rel="canonical" href="http://localhost:8000/new_store/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="New Store – A Melhor Comunidade Para Vendas no Discord" />
+  <meta property="og:description" content="Compre cargos, venda seus produtos e faça parte de uma comunidade profissional." />
+  <meta property="og:url" content="http://localhost:8000/new_store/" />
+  <meta property="og:image" content="/mnt/data/97423de5f4eddb02f5c013d28923be89.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="New Store – Comunidade de Vendas" />
+  <meta name="twitter:description" content="Servidor organizado, staff ativa, suporte rápido e oportunidades reais de vendas." />
+  <meta name="theme-color" content="#0a3d62" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%230a3d62'/%3E%3Cstop offset='0.5' stop-color='%231e90ff'/%3E%3Cstop offset='1' stop-color='%230fbcf9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-size='58' font-family='Segoe UI, Arial, sans-serif' fill='%23ffffff' font-weight='800'%3EN%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root { --blue-1:#0a3d62; --blue-2:#1e90ff; --blue-3:#74b9ff; --blue-4:#0fbcf9; --red:#ff3b3b; --text:#eaf2ff; --text-dim:#c8d6e6; --bg:#061a2e; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; color: var(--text); background:
+      radial-gradient(1000px 600px at 80% 10%, rgba(116,185,255,0.15), rgba(116,185,255,0)),
+      linear-gradient(135deg, var(--bg), #081f36);
+      overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { display: grid; min-height: 100dvh; }
+    .header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(12px); background: rgba(10,61,98,0.35); border-bottom: 1px solid rgba(116,185,255,0.25); }
+    .inner { max-width: 1180px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand img { width: 42px; height: 42px; border-radius: 10px; object-fit: cover; box-shadow: 0 10px 25px rgba(30,144,255,0.35); }
+    .brand .title { font-weight: 800; letter-spacing: -0.01em; font-size: 18px; }
+    .nav { margin-left: auto; display: flex; gap: 16px; flex-wrap: wrap; }
+    .nav a { padding: 10px 14px; border-radius: 999px; color: var(--text); opacity: 0.9; transition: background .35s ease, transform .35s ease; }
+    .nav a:hover { background: rgba(30,144,255,0.18); transform: translateY(-2px); }
+    .btn { appearance: none; border: 0; border-radius: 16px; padding: 14px 24px; font-weight: 800; letter-spacing: 0.02em; cursor: pointer; transition: transform .25s ease, box-shadow .25s ease, filter .25s ease; }
+    .btn-primary { color: #041423; background: linear-gradient(180deg, var(--blue-3), var(--blue-2)); box-shadow: 0 16px 30px rgba(30,144,255,0.45), inset 0 0 0 1px rgba(255,255,255,0.2); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 24px 44px rgba(30,144,255,0.55); filter: brightness(1.08); }
+    .btn-danger { color: #1b0a0a; background: linear-gradient(180deg, #ffc2c2, #ff6060); box-shadow: 0 16px 30px rgba(255,59,59,0.45), inset 0 0 0 1px rgba(255,255,255,0.2); }
+    .btn-danger:hover { transform: translateY(-3px); box-shadow: 0 24px 44px rgba(255,59,59,0.55); filter: brightness(1.08); }
+    .hero { position: relative; overflow: hidden; }
+    .hero-inner { max-width: 1180px; margin: 0 auto; padding: 80px 20px; display: grid; gap: 18px; grid-template-columns: 1.2fr .8fr; align-items: center; }
+    .hero h1 { margin: 0; font-size: clamp(32px, 6vw, 54px); letter-spacing: -0.02em; }
+    .hero p { margin: 0; font-size: clamp(16px, 2.8vw, 20px); color: var(--text-dim); }
+    .hero .logo-big { width: min(380px, 70%); border-radius: 24px; justify-self: center; box-shadow: 0 30px 80px rgba(30,144,255,0.45); }
+    .hero .glow { position: absolute; inset: -20% -20% -20% -20%; background:
+      radial-gradient(800px 400px at 20% 10%, rgba(30,144,255,0.25), transparent),
+      radial-gradient(600px 300px at 80% 30%, rgba(15,188,249,0.25), transparent);
+      filter: blur(30px); pointer-events: none; }
+    .hero .particles { position: absolute; inset: 0; pointer-events: none; }
+    .section { max-width: 1180px; margin: 0 auto; padding: 64px 20px; }
+    .section h2 { margin: 0 0 14px; font-size: clamp(24px, 4.8vw, 34px); }
+    .muted { color: var(--text-dim); }
+    .grid-3 { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card { border-radius: 18px; background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); box-shadow: 0 18px 60px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.12); padding: 20px; }
+    .icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(180deg, var(--blue-4), var(--blue-2)); box-shadow: 0 10px 24px rgba(30,144,255,0.5); }
+    .premium { border-radius: 20px; padding: 24px; background: linear-gradient(180deg, rgba(30,144,255,0.18), rgba(15,188,249,0.18)); box-shadow: 0 22px 60px rgba(30,144,255,0.35); }
+    .staff { border-radius: 20px; padding: 24px; background: linear-gradient(135deg, rgba(255,59,59,0.18), rgba(30,144,255,0.25)); box-shadow: 0 22px 60px rgba(255,59,59,0.35); }
+    .steps { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .step { border-radius: 18px; padding: 18px; background: rgba(255,255,255,0.06); text-align: center; }
+    .step .num { font-size: 22px; font-weight: 900; color: var(--blue-4); }
+    .testimonials { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .testimonial { border-radius: 18px; padding: 18px; background: rgba(255,255,255,0.06); }
+    .cta-final { text-align: center; }
+    .footer { border-top: 1px solid rgba(116,185,255,0.2); background: rgba(10,61,98,0.35); backdrop-filter: blur(10px); margin-top: 40px; }
+    .footer-inner { max-width: 1180px; margin: 0 auto; padding: 24px 20px; display: grid; gap: 16px; grid-template-columns: 1.2fr .8fr; align-items: center; }
+    .footer-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+    .footer img { width: 28px; height: 28px; border-radius: 6px; box-shadow: 0 8px 18px rgba(30,144,255,0.35); }
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .45s ease, transform .45s ease; }
+    .reveal.on { opacity: 1; transform: translateY(0); }
+    @media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; text-align: center; } .nav { display: none; } }
+    @media (max-width: 700px) { .grid-3, .testimonials, .steps { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="inner">
+        <div class="brand">
+          <img id="logoHeader" src="/mnt/data/97423de5f4eddb02f5c013d28923be89.webp" alt="New Store logo" />
+          <div class="title">New Store</div>
+        </div>
+        <nav class="nav">
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#vendedor">Cargo de Vendedor</a>
+          <a href="#staff">Vagas de Staff</a>
+          <a href="https://discord.gg/6d5BZCunHF" target="_blank" rel="noopener" class="btn btn-primary">Entrar</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="inicio" class="hero">
+      <div class="glow"></div>
+      <canvas class="particles" id="particles" width="1280" height="620"></canvas>
+      <div class="hero-inner">
+        <div class="reveal">
+          <h1>New Store – A Melhor Comunidade Para Vendas no Discord</h1>
+          <p>Compre cargos, venda seus produtos e faça parte de uma comunidade profissional.</p>
+          <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; align-items:center">
+            <a href="https://discord.gg/6d5BZCunHF" target="_blank" rel="noopener" class="btn btn-primary">VENHA CONHECER</a>
+          </div>
+        </div>
+        <img id="logoHero" class="logo-big reveal" src="/mnt/data/97423de5f4eddb02f5c013d28923be89.webp" alt="Logo New Store" />
+      </div>
+    </section>
+
+    <section id="sobre" class="section reveal">
+      <h2>Sobre o Servidor</h2>
+      <p class="muted">A New Store é uma comunidade focada em vendas e oportunidades. Qualquer membro pode entrar e começar a interagir. Servidor organizado, staff ativa e suporte rápido. Ambiente seguro e confiável.</p>
+    </section>
+
+    <section id="beneficios" class="section reveal">
+      <h2>Benefícios</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path fill="#041423" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <h3>Compra do Cargo de Vendedor</h3>
+          <p class="muted">Acesso a canais exclusivos e destaque nas vendas.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path fill="#041423" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <h3>Comunidade ativa e filtrada</h3>
+          <p class="muted">Ambiente com membros engajados e moderados.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path fill="#041423" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <h3>Suporte profissional</h3>
+          <p class="muted">Equipe pronta para ajudar com rapidez.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path fill="#041423" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <h3>Ambiente preparado</h3>
+          <p class="muted">Canais e regras pensadas para vendas seguras.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path fill="#041423" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <h3>Oportunidades reais</h3>
+          <p class="muted">Espaço para novos vendedores crescerem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="vendedor" class="section reveal">
+      <div class="premium">
+        <h2>Compre o Cargo de Vendedor e Comece a Vender Agora!</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Vantagens</h3>
+            <p class="muted">Canais exclusivos para venda, permissão para divulgar seus produtos, destaque visual no servidor, maior autoridade e chances de venda.</p>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px">
+            <a href="https://discord.gg/6d5BZCunHF" target="_blank" rel="noopener" class="btn btn-primary">Quero comprar o cargo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="staff" class="section reveal">
+      <div class="staff">
+        <h2>Vagas de Staff Abertas!</h2>
+        <p class="muted">Estamos recrutando novos membros para a equipe. Restam apenas 5 vagas disponíveis! Garanta sua oportunidade antes de acabar.</p>
+        <div style="margin-top:12px">
+          <a href="https://discord.gg/6d5BZCunHF" target="_blank" rel="noopener" class="btn btn-danger">Quero me candidatar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>Como Funciona</h2>
+      <div class="steps">
+        <div class="step"><div class="num">1️⃣</div><div>Entre no servidor</div></div>
+        <div class="step"><div class="num">2️⃣</div><div>Compre o cargo de vendedor (opcional)</div></div>
+        <div class="step"><div class="num">3️⃣</div><div>Comece a divulgar e vender</div></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>Depoimentos</h2>
+      <div class="testimonials">
+        <div class="testimonial"><strong>“A New Store aumentou minhas vendas!”</strong><div class="muted">Vendedor Pro</div></div>
+        <div class="testimonial"><strong>“Comunidade segura e organizada.”</strong><div class="muted">Membro Gold</div></div>
+        <div class="testimonial"><strong>“O cargo de vendedor vale muito a pena!”</strong><div class="muted">Vendedor Iniciante</div></div>
+      </div>
+    </section>
+
+    <section class="section reveal cta-final">
+      <h2>Entre Agora Mesmo no New Store e Comece a Crescer!</h2>
+      <div style="margin-top:16px">
+        <a href="https://discord.gg/6d5BZCunHF" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:18px; padding:18px 28px">VENHA CONHECER</a>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>FAQ</h2>
+      <details class="card"><summary>Preciso comprar o cargo para vender?</summary><p class="muted">Não. Você pode participar da comunidade normalmente. O cargo oferece benefícios e destaque para quem decide vender.</p></details>
+      <details class="card"><summary>Como funciona o suporte?</summary><p class="muted">A equipe de staff responde em canais específicos, com atendimento rápido e organizado.</p></details>
+      <details class="card"><summary>É seguro vender no servidor?</summary><p class="muted">O ambiente é moderado e conta com regras e canais preparados para transações seguras.</p></details>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div style="display:flex; align-items:center; gap:10px">
+          <img id="logoFooter" src="/mnt/data/97423de5f4eddb02f5c013d28923be89.webp" alt="Logo New Store" />
+          <div class="muted">New Store – A melhor comunidade de vendas do Discord.</div>
+        </div>
+        <div class="footer-links">
+          <a href="https://discord.gg/6d5BZCunHF" target="_blank" rel="noopener">Entrar no servidor</a>
+          <a href="#">Contato</a>
+          <a href="#">Políticas básicas</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } }); }, { threshold: 0.25 });
+    revealEls.forEach(el=>io.observe(el));
+    const c = document.getElementById('particles');
+    const ctx = c.getContext('2d');
+    let w = c.clientWidth, h = 420; c.width = w; c.height = h;
+    const parts = Array.from({length: 60}, ()=>({ x: Math.random()*w, y: Math.random()*h, r: Math.random()*2+0.6, s: Math.random()*0.6+0.2, d: Math.random()*Math.PI*2 }));
+    function step(){ ctx.clearRect(0,0,w,h); for(const p of parts){ p.x += Math.cos(p.d)*p.s; p.y += Math.sin(p.d)*p.s*0.6; if(p.x<0||p.x>w) p.d = Math.PI - p.d; if(p.y<0||p.y>h) p.d = -p.d; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); const g = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r); g.addColorStop(0,'rgba(116,185,255,0.9)'); g.addColorStop(1,'rgba(30,144,255,0.0)'); ctx.fillStyle = g; ctx.fill(); }
+      requestAnimationFrame(step); }
+    step();
+    function handleLogoFallback(id){ const el = document.getElementById(id); el.addEventListener('error', ()=>{ el.style.display='none'; const ph = document.createElement('div'); ph.textContent='New Store'; ph.style.fontWeight='800'; ph.style.fontSize= id==='logoHeader' ? '18px' : '28px'; ph.style.background='linear-gradient(180deg, var(--blue-3), var(--blue-2))'; ph.style.webkitBackgroundClip='text'; ph.style.backgroundClip='text'; ph.style.color='transparent'; const parent = el.parentElement; parent.insertBefore(ph, el.nextSibling); }); }
+    handleLogoFallback('logoHeader');
+    handleLogoFallback('logoHero');
+    handleLogoFallback('logoFooter');
+    function resize(){ w = c.clientWidth; c.width = w; }
+    addEventListener('resize', resize);
+  </script>
+</body>
+</html>
